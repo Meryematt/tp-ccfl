@@ -8,7 +8,7 @@
 | 2 | terminée | Chargement des 4 CSV avec pandas ; formes vérifiées : 367 matériels et 4618 réservations ; dates des réservations converties ; `valeur_achat` convertie en nombre ; 72 retours réels manquants identifiés comme prêts en cours ; 21 réservations sans matériel correspondant détectées ; fusion des tables réalisée ; top 10 des matériels les plus réservés exporté dans `sorties/top10_materiel.csv`. | - | 35 min |
 | 3 | terminée | Audit de 14 catégories d'anomalies ; génération de trois fichiers nettoyés et d'un rapport qualité ; 360 matériels conservés avec 6 catégories homogènes ; prêts en cours conservés comme cas métier normal. | J’ai dû comprendre pourquoi les données devaient d’abord être lues comme du texte pour repérer les cellules vides, les espaces, les majuscules et les formats différents. J’ai compris la différence entre `parse_dates` et `pd.to_datetime()`. `parse_dates` convertit les dates dès la lecture du CSV, ce qui est pratique pour une analyse directe. Lors d’un audit de qualité, j’ai compris qu’il est préférable de conserver d’abord les valeurs brutes afin de repérer les formats incohérents, puis d’utiliser `pd.to_datetime()` pour convertir et contrôler les dates. | 1h |
 | 4 | terminée | MCD et MLD rédigés ; quatre tables PostgreSQL créées ; clés primaires, cinq clés étrangères, contraintes `CHECK` et index ajoutés ; script relançable sans erreur. | - | 20min |
-| 5 | | | | |
+| 5 | terminée | Connexion PostgreSQL par variables d’environnement ; chargement de 5 sites, 360 matériels, 210 associations et 4560 réservations ; chargement relancé avec les mêmes comptages ; aucune réservation orpheline. | Valeurs `None` converties en `NULL`. | 1h10 |
 | 6 | | | | |
 | 7 | | | | |
 
