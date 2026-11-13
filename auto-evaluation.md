@@ -9,7 +9,7 @@
 | 3 | terminée | Audit de 14 catégories d'anomalies ; génération de trois fichiers nettoyés et d'un rapport qualité ; 360 matériels conservés avec 6 catégories homogènes ; prêts en cours conservés comme cas métier normal. | J’ai dû comprendre pourquoi les données devaient d’abord être lues comme du texte pour repérer les cellules vides, les espaces, les majuscules et les formats différents. J’ai compris la différence entre `parse_dates` et `pd.to_datetime()`. `parse_dates` convertit les dates dès la lecture du CSV, ce qui est pratique pour une analyse directe. Lors d’un audit de qualité, j’ai compris qu’il est préférable de conserver d’abord les valeurs brutes afin de repérer les formats incohérents, puis d’utiliser `pd.to_datetime()` pour convertir et contrôler les dates. | 1h |
 | 4 | terminée | MCD et MLD rédigés ; quatre tables PostgreSQL créées ; clés primaires, cinq clés étrangères, contraintes `CHECK` et index ajoutés ; script relançable sans erreur. | - | 20min |
 | 5 | terminée | Connexion PostgreSQL par variables d’environnement ; chargement de 5 sites, 360 matériels, 210 associations et 4560 réservations ; chargement relancé avec les mêmes comptages ; aucune réservation orpheline. | Valeurs `None` converties en `NULL`. | 1h10 |
-| 6 | | | | |
+| 6 | terminée | Sept requêtes SQL réalisées : analyses par site et par mois, top matériels, taux de retard, catégories au-dessus de la moyenne, matériel le plus réservé par site et durée moyenne de prêt. Les résultats attendus ont été vérifiés. | Rappel SQL | 50min |
 | 7 | | | | |
 
 ## Ce que je sais faire mieux qu'en septembre
